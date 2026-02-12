@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .saaho {
+            background-color: #e74c3c;
+        }
+
+        .leo {
+            background-color: #27ae60;
+        }
+
+        .master {
+            background-color: #2980b9;
+        }
+
+        #result {
+            margin-top: 40px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Select a Movie</h2>
+
+    <button class="saaho" onclick="showDetails('Saaho')">Saaho</button>
+    <button class="leo" onclick="showDetails('Leo')">Leo</button>
+    <button class="master" onclick="showDetails('Master')">Master</button>
+
+    <div id="result"></div>
+
+    <script>
+        function showDetails(movie) {
+            let details = "";
+
+            if (movie === "Saaho") {
+                details = "Hero: Prabhas<br>Heroine: Shraddha Kapoor";
+            } 
+            else if (movie === "Leo") {
+                details = "Hero: Vijay<br>Heroine: Trisha";
+            } 
+            else if (movie === "Master") {
+                details = "Hero: Vijay<br>Heroine: Malavika Mohanan";
+            }
+
+            document.getElementById("result").innerHTML = details;
+        }
+    </script>
+
+</body>
+</html>
